@@ -1,0 +1,28 @@
+{
+  "root": "apps/server-sent-event-e2e",
+  "sourceRoot": "apps/server-sent-event-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/server-sent-event-e2e/cypress.json",
+        "devServerTarget": "server-sent-event:serve:development"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "server-sent-event:serve:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/server-sent-event-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["server-sent-event"]
+}

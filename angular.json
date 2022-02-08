@@ -1,0 +1,7 @@
+{
+  "version": 2,
+  "projects": {
+    "server-sent-event": "apps/server-sent-event",
+    "server-sent-event-e2e": "apps/server-sent-event-e2e"
+  }
+}
